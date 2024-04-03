@@ -7,6 +7,8 @@ function ProjectItem({ name, about, technologies }) {
       <p>{about}</p>
       <div className="technologies">
         {/* render a <span> for each technology in the technologies array */}
+        {/* some projects use 1+ rails, react,redux, etc. need a seperate label */}
+        <div>{technologies.map(technology => <span key={technology}>{technology}</span>)}</div>
       </div>
     </div>
   );
